@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rc-jiangzhang"
+version = "0.1.0"
+description = "A durable internal HTTP notification service"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115,<1",
+    "httpx>=0.28,<1",
+    "pydantic>=2.9,<3",
+    "uvicorn>=0.34,<1",
+]
+
+[tool.setuptools.packages.find]
+include = ["notify_service*"]
